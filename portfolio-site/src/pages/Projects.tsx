@@ -6,8 +6,11 @@ import { projects } from "../data/projects";
 
 const Projects = () => {
     return (
-        <motion.div>
-            {projects.map((project) => (
+        <motion.div 
+        className="flex items-center justify-center h-[75vh]">
+        <div className="text-center">
+        <h1 className="text-4xl font-bold mb-4 font-roboto">My Projects</h1>
+        {projects.map((project) => (
                 <div>
                     <ProjectItem 
                     title={project.title}
@@ -17,8 +20,9 @@ const Projects = () => {
                     github={project.github}
                     />
                 </div>
-            ))}     
-        </motion.div>
+            ))}
+        </div>
+    </motion.div>
     );
 }
 

@@ -3,7 +3,7 @@ import "../styles/global.css";
 
 const Contact = () => {
     return (
-        <div className="w-screen h-screen">
+        <div className="">
             <h1>Contact</h1>
         </div>
     );

@@ -5,63 +5,46 @@ import { motion } from "framer-motion";
 const Navigation = () => {
     const location = useLocation();
 
+    const tabs = [
+        { path: "/", label: "Home" },
+        { path: "/about", label: "About" },
+        { path: "/projects", label: "Projects" },
+        { path: "/contact", label: "Contact" },
+    ];
+
     return (
-        <nav 
-            className="mx-auto flex w-fit h-[6vh] pl-0.5 pr-0.5 items-center justify-between bg-white shadow-lg rounded-full mt-10">
-            <ul className="flex items-center space-x-2 text-lg mx-auto">
-                <motion.li whileTap={{ scale: 0.9 }}>
-                    <Link
-                        className={`relative inline-block px-4 py-2 ${
-                            location.pathname === "/"
-                                ? "border bg-[#e2e2e2] rounded-full"
-                                : ""
-                        }`}
-                        to="/"
+        <motion.nav 
+            initial={{ y: -200 }}
+            animate={{ y: 0 }}
+            transition={{ y: { type: "spring", delay: 0.5, stiffness:25, duration: 5 } }}
+            className="mx-auto flex w-fit h-[6vh] pl-0.5 pr-0.5 items-center justify-between bg-slate-100 shadow-lg rounded-xl mt-10">
+            <ul className="flex items-center space-x-2 text-lg mx-auto relative">
+                {tabs.map((tab) => (
+                    <motion.li
+                        key={tab.path}
+                        whileTap={{ scale: 0.8 }}
+                        className="relative inline-block px-4 py-2"
                     >
-                        Home
-                    </Link>
-                </motion.li>
-
-                <motion.li whileTap={{ scale: 0.9 }}>
-                    <Link
-                        className={`relative inline-block px-4 py-2 ${
-                            location.pathname === "/about"
-                                ? "border bg-[#e2e2e2] rounded-full"
-                                : ""
-                        }`}
-                        to="/about"
-                    >
-                        About
-                    </Link>
-                </motion.li>
-
-                <motion.li whileTap={{ scale: 0.9 }}>
-                    <Link
-                        className={`relative inline-block px-4 py-2 ${
-                            location.pathname === "/projects"
-                                ? "border bg-[#e2e2e2] rounded-full "
-                                : ""
-                        }`}
-                        to="/projects"
-                    >
-                        Projects
-                    </Link>
-                </motion.li>
-
-                <motion.li whileTap={{ scale: 0.9 }}>
-                    <Link
-                        className={`relative inline-block px-4 py-2 ${
-                            location.pathname === "/contact"
-                                ? "border bg-[#e2e2e2] rounded-full"
-                                : ""
-                        }`}
-                        to="/contact"
-                    >
-                        Contact
-                    </Link>
-                </motion.li>
+                        <Link
+                            className={`relative inline-block px-4 py-2 x-1 z-10 ${
+                                location.pathname === tab.path ? "text-black" : "text-default"
+                            }`}
+                            to={tab.path}
+                        >
+                            {tab.label}
+                        </Link>
+                        {location.pathname === tab.path && (
+                            <motion.div
+                                layoutId="highlight"
+                                className="absolute inset-3 bg-gray-200 rounded-xl"
+                                initial={false}
+                                transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                            />
+                        )}
+                    </motion.li>
+                ))}
             </ul>
-        </nav>
+        </motion.nav>
     );
 };
 

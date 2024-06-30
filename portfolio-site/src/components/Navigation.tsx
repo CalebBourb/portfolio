@@ -7,7 +7,7 @@ const Navigation = () => {
 
     const tabs = [
         { path: "/", label: "Home" },
-        { path: "/about", label: "About" },
+        { path: "/skills", label: "Skills" },
         { path: "/projects", label: "Projects" },
         { path: "/contact", label: "Contact" },
     ];
@@ -22,8 +22,8 @@ const Navigation = () => {
                 {tabs.map((tab) => (
                     <motion.li
                         key={tab.path}
-                        whileTap={{ scale: 0.8 }}
-                        className="relative inline-block px-4 py-2"
+                        className="relative inline-block px-5 py-2"
+                        
                     >
                         <Link
                             className={`relative inline-block px-4 py-2 x-1 z-10 ${

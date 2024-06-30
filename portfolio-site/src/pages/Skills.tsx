@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const About = () => {
+const Skills = () => {
     return (
         <motion.div 
         key={"home"}
@@ -12,15 +12,15 @@ const About = () => {
         ease: [0, 0.71, 0.2, 1.01],
         }}
             
-        className="flex items-center justify-center h-[75vh]">
+        className="flex justify-center h-[75vh] pt-10">
         <div className="text-center">
-            <h1 className="text-4xl font-bold mb-4 font-roboto">About Me</h1>
+            <h1 className="text-4xl font-bold mb-4 font-roboto">My Experience</h1>
             <p className="justify-end">
-                blah blah blah
+                Agile development practices
             </p>
         </div>
         </motion.div>
     );
 }
 
-export default About;
+export default Skills;

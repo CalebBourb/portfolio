@@ -16,16 +16,14 @@ const Home = () => {
         ease: [0, 0.71, 0.2, 1.01],
         }}
         >
-        <div className="flex justify-center items-end h-[40vh]">
+        <div className="flex justify-center items-end h-[50vh] max-sm:h-[60vh]">
         <div className="text-center">
-        <h1 className="text-4xl mb-4 font-roboto">Hello, my name is <b>Caleb Bourbonnais!</b></h1>
+        <h1 className="text-4xl max-sm:text-2xl mb-4 font-roboto">Hello, my name is <b>Caleb Bourbonnais!</b></h1>
         <p className="justify-end text-2xl pl-2 pr-2 pt-2">
             I'm a Software Engineering student at the University of Calgary
-        </p>
-        <p className="justify-end text-2xl pl-2 pr-2">
             who's always looking for new opportunities to learn and grow.
         </p>
-        <p className="justify-end text-2xl pl-2 pr-2">
+        <p className="justify-end text-2xl max-sm:text-lg pl-2 pr-2 pt-2">
             I'm currently looking for an intersnship for May 2025.
         </p>
         </div>

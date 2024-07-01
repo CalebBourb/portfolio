@@ -13,7 +13,7 @@ const Navigation = () => {
     ];
 
     return (
-        <motion.nav 
+        <motion.nav
             initial={{ y: -200 }}
             animate={{ y: 0 }}
             transition={{ y: { type: "spring", delay: 0.5, stiffness:25, duration: 5 } }}
@@ -22,7 +22,7 @@ const Navigation = () => {
                 {tabs.map((tab) => (
                     <motion.li
                         key={tab.path}
-                        className="relative inline-block px-5 py-2"
+                        className="relative inline-block max-sm:px-0 px-5 py-2"
                         
                     >
                         <Link

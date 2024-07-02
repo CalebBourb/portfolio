@@ -7,18 +7,28 @@ import Projects from './pages/Projects';
 import Contact from './pages/Contact';
 import Navigation from './components/Navigation';
 
+
 function App() {
   return (
-    <div className="font-neurialgrotesk	min-h-screen text-[#333333] text-lg bg-fixed overflow-hidden bg-gradient-to-br from-purple-200 via-red-100 to-purple-200 overflow-none">
-    <Navigation />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/skills" element={<Skills />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
+    <div className="font-neurialgrotesk	min-h-screen text-[#333333] text-lg bg-fixed overflow-hidden bg-gradient-to-br from-purple-100 via-red-100 to-purple-100 overflow-none">
+    <div className="h-full w-full">
+      <div className="h-[4vh] max-sm:h-0">
+      </div>
+      <div className="h-[16vh] ">
+      <Navigation />
+      </div>
+      <div>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/skills" element={<Skills />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/Resume" element={""} />
+        </Routes>
+      </div>
     </div>
-  );
+    </div>
+);
 }
 
 export default App;

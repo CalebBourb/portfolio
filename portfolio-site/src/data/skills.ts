@@ -1,0 +1,21 @@
+export const skills:string[] = [
+    'React.js',
+    'Node.js',
+    'TypeScript',
+    'Tailwind',
+    'CSS',
+    'AWS',
+    'SQL',
+    'Git',
+    'Docker',
+    'Kubernetes',
+    'Python',
+    'C++',
+    'Java',
+    'C',
+    'Jira',
+    'Confluence',
+    'React Native',
+    'Expo',
+    'Flask'
+]

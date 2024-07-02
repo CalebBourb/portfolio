@@ -6,7 +6,7 @@ import { projects } from "../data/projects";
 
 const Projects = () => {
     return (
-        <>
+        <div className="w-full h-full">
         <motion.div 
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -15,10 +15,11 @@ const Projects = () => {
         ease: [0, 0.71, 0.2, 1.01],
         }}
         >
-        <div className="flex justify-center items-center h-[20vh] mt-10 max-sm:h-[10vh]">
+        <div className="flex justify-center h-[20vh] max-sm:h-[10vh]">
             <h1 className="text-center text-4xl max-sm:text-2xl font-bold mb-4 font-roboto ">What I'm currently Working on</h1>
         </div>
         </motion.div>
+        <div className="justify-center">
         <div
         className="flex flex-row flex-wrap justify-center">
         {projects.map((project, i) => (
@@ -37,8 +38,8 @@ const Projects = () => {
                 </motion.div>
             ))}
         </div>
-        </>
-    
+        </div>
+        </div>    
     );
 }
 

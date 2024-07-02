@@ -17,16 +17,16 @@ const Navigation = () => {
             initial={{ y: -200 }}
             animate={{ y: 0 }}
             transition={{ y: { type: "spring", delay: 0.5, stiffness:25, duration: 5 } }}
-            className="mx-auto flex w-fit h-[6vh] pl-0.5 pr-0.5 items-center justify-between bg-slate-100 shadow-lg rounded-xl mt-10">
-            <ul className="flex items-center space-x-2 text-lg mx-auto relative">
+            className="mx-auto flex w-fit max-sm:w-full h-12 max-sm:h-20 items-center justify-between bg-slate-100 shadow-lg rounded-xl max-sm:rounded-none">
+            <ul className="flex items-center space-x-2 max-sm:space-x-0 text-lg max-sm:text-md mx-auto">
                 {tabs.map((tab) => (
                     <motion.li
                         key={tab.path}
-                        className="relative inline-block max-sm:px-0 px-5 py-2"
+                        className="relative inline-block max-sm:px-4 px-5 py-2"
                         
                     >
                         <Link
-                            className={`relative inline-block px-4 py-2 x-1 z-10 ${
+                            className={`relative inline-block max-sm:px-0 px-4 py-2 x-1 z-10 ${
                                 location.pathname === tab.path ? "text-black" : "text-default"
                             }`}
                             to={tab.path}

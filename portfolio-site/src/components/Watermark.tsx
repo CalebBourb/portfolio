@@ -11,12 +11,9 @@ const Watermark = () => {
         ease: [0, 0.71, 0.2, 1.01],
         delay: 0.5
         }}
-        className="absolute bottom-0 flex flex-row h-[5vh] w-full"
+        className="flex flex-row h-full w-full justify-center text-xs padding p-2"
         >
-        <div className='absolute bottom-0 left-0 text-xs p-2'>
-            <p>Built with React.js, Tailwind, Typescript, Material UI, Framer Motion, hosted with AWS.</p>
-        </div>
-        <div className="absolute bottom-0 right-0 text-xs p-2">
+        <div>
             <p>© 2024 Caleb Bourbonnais</p>
         </div>
         

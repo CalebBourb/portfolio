@@ -55,6 +55,7 @@ const Skills = () => {
                 <div className="flex flex-wrap justify-center w-[75vh] ">
                 {skills.map((skill, i) => (
                     <motion.div 
+                        key = {i}
                         initial={{ y: 600 }}
                         animate={{ y: 0 }}
                         transition={{ y: { type: "spring", delay: 0.5 + i*0.1, stiffness:25, duration: 5 } }}

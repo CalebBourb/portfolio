@@ -15,7 +15,7 @@ const Projects = () => {
         ease: [0, 0.71, 0.2, 1.01],
         }}
         >
-        <div className="flex justify-center h-[20vh] max-sm:h-[10vh]">
+        <div className="flex justify-center h-[10vh] max-sm:h-[10vh]">
             <h1 className="text-center text-4xl max-sm:text-2xl font-bold mb-4 font-roboto ">What I'm currently Working on</h1>
         </div>
         </motion.div>

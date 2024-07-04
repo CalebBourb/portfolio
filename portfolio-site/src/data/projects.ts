@@ -9,7 +9,6 @@ export const projects = [
         title: "PuckJourney",
         description: "A web based game where users guess the teams NHL players have played for! Uses Vanilla JS, HTML, and CSS. Getting a makeover soon!",
         image: "p-j.png",
-        url: "https://puckjourney.vercel.app",
         github: "https://www.github.com"
     },
     {

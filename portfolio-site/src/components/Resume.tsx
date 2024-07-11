@@ -1,7 +1,7 @@
 import React from "react";
 import DownloadIcon from '@mui/icons-material/Download';
 import { motion } from "framer-motion";
-import Pdf from "../files/Caleb_Bourbonnais.pdf";
+import Pdf from "../files/Caleb_bourbonnais.pdf";
 
 
 const Resume = () => {

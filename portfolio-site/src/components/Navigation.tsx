@@ -17,7 +17,7 @@ const Navigation = () => {
             initial={{ y: -200 }}
             animate={{ y: 0 }}
             transition={{ y: { type: "spring", delay: 0.5, stiffness:25, duration: 5 } }}
-            className="mx-auto flex w-fit max-sm:w-full h-12 max-sm:h-20 items-center justify-between bg-slate-100 shadow-lg rounded-xl max-sm:rounded-none">
+            className="mx-auto flex w-screen max-sm:w-screen h-12 max-sm:h-12 items-center justify-between bg-slate-100 shadow-lg rounded-xl max-sm:rounded-none">
             <ul className="flex items-center space-x-2 max-sm:space-x-0 text-lg max-sm:text-md mx-auto">
                 {tabs.map((tab) => (
                     <motion.li
@@ -38,7 +38,7 @@ const Navigation = () => {
                                 layoutId="highlight"
                                 className="absolute inset-3 bg-gray-200 rounded-xl"
                                 initial={false}
-                                transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                                transition={{ type: "spring", stiffness: 300, damping: 30, duration: 0.1}}
                             />
                         )}
                     </motion.li>

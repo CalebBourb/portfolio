@@ -7,7 +7,7 @@ import Resume from "../components/Resume";
 
 const Skills = () => {
     return (
-        <div className="h-full w-full">
+        <div className="h-full w-screen">
             <motion.div 
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}

@@ -10,14 +10,14 @@ import Navigation from './components/Navigation';
 
 function App() {
   return (
-    <div className="font-neurialgrotesk	min-h-screen text-[#333333] text-lg bg-fixed overflow-hidden bg-gradient-to-br from-purple-100 via-red-100 to-purple-100 overflow-none">
+    <div className="font-neurialgrotesk	min-h-screen text-[#333333] text-lg bg-fixed overflow-hidden bg-gradient-to-br from-purple-100 via-red-100 to-purple-100">
       <div className="">
         <div className="h-[4vh] max-sm:h-0">
         </div>
-        <div className="h-[16vh] fixed z-10">
-        <Navigation />
+        <div className="h-[12vh] z-10 items-center w-screen">
+          <Navigation />
         </div>
-        <div className="grid pt-20">
+        <div className="grid">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/skills" element={<Skills />} />

@@ -7,8 +7,8 @@ import Resume from "../components/Resume";
 
 const Home = () => {
     return (
-        <>
-        <div className="h-full">
+        <div>
+        <div className="h-[80vh]">
             <motion.div 
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -61,7 +61,7 @@ const Home = () => {
                 <Resume />
             </motion.div>
         </div>
-        </>
+        </div>
 
     );
 }

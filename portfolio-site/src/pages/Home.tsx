@@ -1,6 +1,5 @@
 import React from "react";
 import "../styles/global.css";
-import { motion } from "framer-motion";
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import Resume from "../components/Resume";
@@ -9,14 +8,7 @@ const Home = () => {
     return (
         <div>
         <div className="h-[80vh]">
-            <motion.div 
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{
-            duration: 1.5,
-            ease: [0, 0.71, 0.2, 1.01],
-            }}
-            >
+            <div>
             <div className="flex justify-center">
                 <div className="text-center max-w-[120vh] px-5">
                     <h1 className="text-4xl max-sm:text-2xl mb-4 font-roboto">Hello, my name is <b>Caleb Bourbonnais!</b></h1>
@@ -34,32 +26,21 @@ const Home = () => {
                     </p>
                 </div>
             </div>
-            </motion.div>
-            <motion.div 
-                initial={{ opacity: 0, scale: 0.5 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{
-                duration: 1.5,
-                ease: [0, 0.71, 0.2, 1.01],
-                delay: 0.5
-                }}
+            </div>
+            <div 
                 className="flex flex-row justify-center pt-8">
-                <motion.div
-                whileHover={{ scale: 1.1 }}
-                >
+                <div>
                     <a href="https://www.linkedin.com/in/caleb-bourbonnais-2a299897/" className="p-4">
                         <LinkedInIcon style={{ fontSize: 40 }} />
                     </a>
-                    </motion.div>
-                    <motion.div
-                    whileHover={{ scale: 1.1 }}
-                    >
+                    </div>
+                    <div>
                     <a href="https://github.com/CalebBourb" className="p-4">
                         <GitHubIcon style={{ fontSize: 40 }} />
                     </a>
-                </motion.div> 
+                </div> 
                 <Resume />
-            </motion.div>
+            </div>
         </div>
         </div>
 

@@ -14,7 +14,7 @@ function App() {
       <div className="">
         <div className="h-[4vh] max-sm:h-0">
         </div>
-        <div className="h-[12vh] z-10 items-center w-screen">
+        <div className="h-[12vh] z-10 items-center w-screen fixed">
           <Navigation />
         </div>
         <div className="grid">

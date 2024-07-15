@@ -1,6 +1,5 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
-import { motion } from "framer-motion";
 
 const Navigation = () => {
     const location = useLocation();
@@ -13,14 +12,11 @@ const Navigation = () => {
     ];
 
     return (
-        <motion.nav
-            initial={{ y: -200 }}
-            animate={{ y: 0 }}
-            transition={{ y: { type: "spring", delay: 0.5, stiffness:25, duration: 5 } }}
+        <nav
             className="mx-auto flex w-fit max-sm:w-screen h-12 max-sm:h-12 items-center justify-between bg-slate-100 shadow-lg rounded-xl max-sm:rounded-none">
             <ul className="flex items-center space-x-2 max-sm:space-x-0 text-lg max-sm:text-md mx-auto">
                 {tabs.map((tab) => (
-                    <motion.li
+                    <li
                         key={tab.path}
                         className="relative inline-block max-sm:px-4 px-5 py-2 "
                         
@@ -34,21 +30,14 @@ const Navigation = () => {
                             {tab.label}
                         </Link>
                         {location.pathname === tab.path && (
-                            <motion.div
-                                layoutId="highlight"
+                            <div
                                 className="absolute inset-3 bg-gray-200 rounded-xl"
-                                initial={{ opacity: 0, scale: 0.5 }}
-                                animate={{ opacity: 1, scale: 1 }}
-                                transition={{
-                                duration: 0.1,
-                                ease: [0, 0.71, 0.2, 1.01],
-                                }}
                             />
                         )}
-                    </motion.li>
+                    </li>
                 ))}
             </ul>
-        </motion.nav>
+        </nav>
     );
 };
 

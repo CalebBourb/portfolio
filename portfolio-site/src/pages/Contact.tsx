@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 
 type Data = {
   data: any;
@@ -44,104 +43,61 @@ const Contact: React.FC = () => {
 
   return (
     <div className="w-full h-full">
-      <motion.div
-        initial={{ opacity: 0, scale: 0.5 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{
-          duration: 1.5,
-          ease: [0, 0.71, 0.2, 1.01],
-        }}
+      <div
         className="flex justify-center h-[10vh] max-sm:h-[10vh]"
       >
         <h1 className="text-center text-4xl max-sm:text-2xl font-bold mb-4 font-roboto">
           Contact Me
         </h1>
-      </motion.div>
+      </div>
       <div className="h-[50vh] max-w-[100vh] mx-auto">
         <form className="flex flex-col justify-center px-5" onSubmit={onSubmit} ref={formRef}>
-          <motion.p
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{
-              delay: 1.2,
-              duration: 1.5,
-              ease: [0, 0.71, 0.2, 1.01],
-            }}
+          <p
             className="text-center text-lg pt-2"
           >
             Name:
-          </motion.p>
+          </p>
 
-          <motion.input
-            initial={{ y: 600 }}
-            animate={{ y: 0 }}
-            transition={{ y: { type: "spring", delay: 0.1, stiffness: 25, duration: 5 } }}
+          <input
             className="p-2 rounded-2xl shadow-md bg-slate-100"
             type="text"
             name="name"
             required
           />
 
-          <motion.p
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{
-              delay: 1.3,
-              duration: 1.5,
-              ease: [0, 0.71, 0.2, 1.01],
-            }}
+          <p
             className="text-center text-lg pt-2"
           >
             Email:
-          </motion.p>
+          </p>
 
           <input type="hidden" name="access_key" value="key" />
 
-          <motion.input
-            initial={{ y: 600 }}
-            animate={{ y: 0 }}
-            transition={{ y: { type: "spring", delay: 0.3, stiffness: 25, duration: 5 } }}
+          <input
             className="p-2 rounded-2xl shadow-md bg-slate-100"
             type="email"
             name="email"
             required
           />
 
-          <motion.p
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{
-              delay: 1.4,
-              duration: 1.5,
-              ease: [0, 0.71, 0.2, 1.01],
-            }}
+          <p
             className="text-center text-lg pt-2"
           >
             Message:
-          </motion.p>
+          </p>
 
-          <motion.textarea
-            initial={{ y: 600 }}
-            animate={{ y: 0 }}
-            transition={{ y: { type: "spring", delay: 0.5, stiffness: 25, duration: 5 } }}
+          <textarea
             className="mb-4 h-40 resize-none p-2 rounded-2xl shadow-md w-full bg-slate-100"
             name="message"
             required
           />
 
-          <motion.button
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{
-              delay: 1.5,
-              duration: 1.5,
-              ease: [0, 0.71, 0.2, 1.01],
-            }}
+          <button
             className="w-fit h-full bg-slate-100 rounded-lg shadow-md p-2 flex flex-row items-center text-sm mx-auto"
             type="submit"
           >
             Send Email
-          </motion.button>
+          </button>
         </form>
         <div className="text-center pt-4">
           <span>{result}</span>

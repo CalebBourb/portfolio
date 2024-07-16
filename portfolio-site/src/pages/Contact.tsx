@@ -48,8 +48,7 @@ const Contact: React.FC = () => {
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{
-          duration: 1.5,
-          ease: [0, 0.71, 0.2, 1.01],
+          duration: 0.5,
         }}
         className="flex justify-center h-[10vh] max-sm:h-[10vh]"
       >
@@ -63,9 +62,8 @@ const Contact: React.FC = () => {
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{
-              delay: 1.2,
-              duration: 1.5,
-              ease: [0, 0.71, 0.2, 1.01],
+              delay: 0.2,
+              duration: 0.5,
             }}
             className="text-center text-lg pt-2"
           >
@@ -73,9 +71,9 @@ const Contact: React.FC = () => {
           </motion.p>
 
           <motion.input
-            initial={{ y: 600 }}
-            animate={{ y: 0 }}
-            transition={{ y: { type: "spring", delay: 0.1, stiffness: 25, duration: 5 } }}
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.1, duration: 0.5 }}
             className="p-2 rounded-2xl shadow-md bg-slate-100"
             type="text"
             name="name"
@@ -86,9 +84,8 @@ const Contact: React.FC = () => {
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{
-              delay: 1.3,
-              duration: 1.5,
-              ease: [0, 0.71, 0.2, 1.01],
+              delay: 0.3,
+              duration: 0.5,
             }}
             className="text-center text-lg pt-2"
           >
@@ -98,9 +95,9 @@ const Contact: React.FC = () => {
           <input type="hidden" name="access_key" value="key" />
 
           <motion.input
-            initial={{ y: 600 }}
-            animate={{ y: 0 }}
-            transition={{ y: { type: "spring", delay: 0.3, stiffness: 25, duration: 5 } }}
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.1, duration: 0.5 }}
             className="p-2 rounded-2xl shadow-md bg-slate-100"
             type="email"
             name="email"
@@ -111,9 +108,8 @@ const Contact: React.FC = () => {
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{
-              delay: 1.4,
-              duration: 1.5,
-              ease: [0, 0.71, 0.2, 1.01],
+              delay: 0.4,
+              duration: 0.5,
             }}
             className="text-center text-lg pt-2"
           >
@@ -121,9 +117,9 @@ const Contact: React.FC = () => {
           </motion.p>
 
           <motion.textarea
-            initial={{ y: 600 }}
-            animate={{ y: 0 }}
-            transition={{ y: { type: "spring", delay: 0.5, stiffness: 25, duration: 5 } }}
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.1, duration: 0.5 }}
             className="mb-4 h-40 resize-none p-2 rounded-2xl shadow-md w-full bg-slate-100"
             name="message"
             required
@@ -133,9 +129,8 @@ const Contact: React.FC = () => {
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{
-              delay: 1.5,
-              duration: 1.5,
-              ease: [0, 0.71, 0.2, 1.01],
+              delay: 0.5,
+              duration: 0.5,
             }}
             className="w-fit h-full bg-slate-100 rounded-lg shadow-md p-2 flex flex-row items-center text-sm mx-auto"
             type="submit"

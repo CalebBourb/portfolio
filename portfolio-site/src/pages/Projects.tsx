@@ -11,8 +11,7 @@ const Projects = () => {
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{
-        duration: 1.5,
-        ease: [0, 0.71, 0.2, 1.01],
+        duration: 0.5,
         }}
         >
         <div className="flex justify-center h-[5vh] max-sm:h-[10vh]">
@@ -24,9 +23,13 @@ const Projects = () => {
         className="flex flex-row flex-wrap justify-center">
         {projects.map((project, i) => (
                 <motion.div 
-                    initial={{ y: 700 }}
-                    animate={{ y: 0 }}
-                    transition={{ y: { type: "spring", delay: 0.1 + i*0.25, stiffness:25, duration: 5 } }}
+                    key = {i}
+                    initial={{ opacity: 0, scale: 0.5 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ 
+                        delay: 0.5 + i*0.25,
+                        duration: 0.5,
+                    }}
                     className="flex flex-col m-8 max-sm:m-6">
                     <ProjectItem 
                     title={project.title}

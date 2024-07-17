@@ -45,8 +45,8 @@ const Contact: React.FC = () => {
   return (
     <div className="w-full h-full">
       <motion.div
-        initial={{ opacity: 0, scale: 0.5 }}
-        animate={{ opacity: 1, scale: 1 }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
         transition={{
           duration: 0.5,
         }}

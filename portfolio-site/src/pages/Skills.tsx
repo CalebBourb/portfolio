@@ -9,10 +9,9 @@ const Skills = () => {
     return (
         <div className="h-full w-screen">
             <motion.div 
-                initial={{ opacity: 0, scale: 0.80 }}
-                animate={{ opacity: 1, scale: 1 }}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
                 transition={{
-                    delay: 0,
                     duration: 0.5,
                 }}
                 className="flex justify-center pb-6">
@@ -40,17 +39,16 @@ const Skills = () => {
                 <Resume />
             </motion.div>
             <motion.div 
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
                 transition={{
-                delay: 0,
                 duration: 0.5,
                 }}
                 className="flex justify-center pt-6">
                 <h1 className="text-4xl font-bold py-4">My Skills</h1>
             </motion.div>
             <div className="flex justify-center">
-                <div className="flex flex-wrap justify-center w-[75vh] ">
+                <div className="flex flex-wrap justify-center w-[75vh] pb-6 ">
                 {skills.map((skill, i) => (
                     <motion.div 
                         key = {i}

@@ -22,11 +22,11 @@ const Navigation = () => {
                 {tabs.map((tab) => (
                     <motion.li
                         key={tab.path}
-                        className="relative inline-block max-sm:px-4 px-5 py-2 "
+                        className="relative inline-block max-sm:px-3 px-5 py-2 "
                         
                     >
                         <Link
-                            className={`relative inline-block max-sm:px-0.5 px-4 py-2 x-1 z-10 ${
+                            className={`relative inline-block max-sm:px-0 px-4 py-2 x-1 z-10 ${
                                 location.pathname === tab.path ? "text-black" : "text-default"
                             }`}
                             to={tab.path}
@@ -36,12 +36,12 @@ const Navigation = () => {
                         {location.pathname === tab.path && (
                             <motion.div
                                 layoutId="highlight"
-                                className="absolute inset-3 bg-gray-200 rounded-xl"
-                                initial={{ opacity: 0, scale: 0.5 }}
-                                animate={{ opacity: 1, scale: 1 }}
+                                className="absolute flex justify-start inset-x-1 inset-y-3 bg-gray-200 rounded-xl"
+                                initial={{ opacity: 1 }}
+                                animate={{ opacity: 1 }}
                                 transition={{
-                                duration: 0.1,
-                                ease: [0, 0.71, 0.2, 1.01],
+                                type: "linear",
+                                duration: 0.2,
                                 }}
                             />
                         )}

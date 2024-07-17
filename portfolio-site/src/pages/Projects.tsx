@@ -6,15 +6,15 @@ import { projects } from "../data/projects";
 
 const Projects = () => {
     return (
-        <div className="w-full h-full">
+        <div className="w-full h-fit">
         <motion.div 
-        initial={{ opacity: 0, scale: 0.5 }}
-        animate={{ opacity: 1, scale: 1 }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
         transition={{
         duration: 0.5,
         }}
         >
-        <div className="flex justify-center h-[5vh] max-sm:h-[10vh]">
+        <div className="flex justify-center h-[5vh] max-sm:h-[6vh]">
             <h1 className="text-center text-4xl max-sm:text-2xl font-bold pb-2 font-roboto ">What I'm currently Working on</h1>
         </div>
         </motion.div>
@@ -27,10 +27,10 @@ const Projects = () => {
                     initial={{ opacity: 0, scale: 0.5 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ 
-                        delay: 0.5 + i*0.25,
+                        delay: 0.2 + i*0.25,
                         duration: 0.5,
                     }}
-                    className="flex flex-col m-8 max-sm:m-6">
+                    className="flex flex-col px-6 py-3 w-fit">
                     <ProjectItem 
                     title={project.title}
                     description={project.description}

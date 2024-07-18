@@ -20,9 +20,10 @@ const Skills = () => {
                     <div className="flex justify-center max-sm:flex-col">
                         {experiences.map((experience) => (
                             <div className="flex flex-col pb-2 px-14 max-w-[50vh]">
+                                <experience.icon className="h-15 w-15 self-center mb-2"/>
                                 <h2 className="text-xl font-bold">{experience.title}</h2>
                                 <p className="text-lg">{experience.company}</p>
-                                <p className="text-sm"><i>{experience.technologies}</i></p>
+                                <p className="text-sm"><i>{experience.time}</i></p>
                             </div>
                         ))}
                     </div>

@@ -58,9 +58,15 @@ const Skills = () => {
                             delay: 0.25 + i*0.1,
                         }}
                         className="flex mx-1 my-1">
-                        <SkillItem
-                        title={skill}
-                        />
+                        <motion.div
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }}
+                        className="h-fit w-fit"
+                        >
+                            <SkillItem
+                            title={skill}
+                            />
+                        </motion.div>
                     </motion.div>
                 ))}
                 </div>

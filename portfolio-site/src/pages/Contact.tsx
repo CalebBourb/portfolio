@@ -124,19 +124,23 @@ const Contact: React.FC = () => {
             name="message"
             required
           />
-
-          <motion.button
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{
-              delay: 0.5,
-              duration: 0.5,
-            }}
-            className="w-fit h-full bg-slate-100 rounded-lg shadow-md p-2 flex flex-row items-center text-sm mx-auto"
-            type="submit"
+          <motion.div
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
           >
-            Send Email
-          </motion.button>
+            <motion.button
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{
+                delay: 0.5,
+                duration: 0.5,
+              }}
+              className="w-fit h-full bg-slate-100 rounded-lg shadow-md p-2 flex flex-row items-center text-sm mx-auto"
+              type="submit"
+            >
+              Send Email
+            </motion.button>
+          </motion.div>
         </form>
         <div className="text-center pt-4">
           <span>{result}</span>

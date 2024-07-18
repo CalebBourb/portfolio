@@ -28,38 +28,44 @@ const Home = () => {
                         willingness to learn make me a great candidate for any team!
                     </p>
                     <p className="justify-end text-2xl max-sm:text-lg p-2">  
-                    Please reaach out if you have any questions or would like to work together!
+                    Please reach out if you have any questions or would like to work together!
                     </p>
                 </div>
             </div>
             </motion.div>
             <div className="flex flex-row justify-center pt-8 pb-6">
-                    <motion.div
-                    initial={{ opacity: 0, scale: 0.5 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{
-                    duration: 0.5,
-                    delay: 0.3
-                    }}
-                    whileHover={{ scale: 1.1 }}
-                    >
-                    <a href="https://www.linkedin.com/in/caleb-bourbonnais-2a299897/" className="p-4">
-                        <LinkedInIcon style={{ fontSize: 40 }} />
-                    </a>
+                        <motion.div
+                        initial={{ opacity: 0, scale: 0.5 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{
+                        duration: 0.5,
+                        delay: 0.3
+                        }}
+                        >
+                        <motion.div
+                        whileHover={{ scale: 1.2 }}
+                        >
+                        <a href="https://www.linkedin.com/in/caleb-bourbonnais-2a299897/" className="p-4">
+                            <LinkedInIcon style={{ fontSize: 40 }} />
+                        </a>
+                        </motion.div>
+                        </motion.div>
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.5 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            transition={{
+                            duration: 0.5,
+                            delay: 0.5
+                            }}
+                            >
+                            <motion.div
+                            whileHover={{ scale: 1.2 }}
+                            >
+                            <a href="https://github.com/CalebBourb" className="p-4">
+                                <GitHubIcon style={{ fontSize: 40 }} />
+                            </a>
+                        </motion.div> 
                     </motion.div>
-                    <motion.div
-                    initial={{ opacity: 0, scale: 0.5 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{
-                    duration: 0.5,
-                    delay: 0.5
-                    }}
-                    whileHover={{ scale: 1.1 }}
-                    >
-                    <a href="https://github.com/CalebBourb" className="p-4">
-                        <GitHubIcon style={{ fontSize: 40 }} />
-                    </a>
-                </motion.div> 
                 <motion.div
                 initial={{ opacity: 0, scale: 0.5 }}
                 animate={{ opacity: 1, scale: 1 }}

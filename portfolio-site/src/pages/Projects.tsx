@@ -20,8 +20,9 @@ const Projects = () => {
         </motion.div>
         <div className="justify-center">
         <div
-        className="flex flex-row flex-wrap justify-center">
+        className="flex flex-row flex-wrap justify-center pt-6">
         {projects.map((project, i) => (
+                
                 <motion.div 
                     key = {i}
                     initial={{ opacity: 0, scale: 0.5 }}
@@ -35,7 +36,8 @@ const Projects = () => {
                     title={project.title}
                     description={project.description}
                     image={project.image}
-                    github={project.github}
+                    site={project.site}
+                    id={project.id}
                     />
                 </motion.div>
             ))}

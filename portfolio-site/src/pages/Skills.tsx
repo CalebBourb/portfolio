@@ -14,15 +14,16 @@ const Skills = () => {
                 transition={{
                     duration: 0.5,
                 }}
-                className="flex justify-center pb-6">
+                className="flex justify-center pb-4">
                 <div className="text-center">
-                    <h1 className="text-4xl font-bold pb-10">My Experience</h1>               
+                    <h1 className="text-4xl max-sm:text-3xl font-bold pb-10">My Experience</h1>               
                     <div className="flex justify-center max-sm:flex-col">
                         {experiences.map((experience) => (
-                            <div className="flex flex-col pb-2 px-14 max-w-[50vh]">
+                            <div className="flex flex-col pb-6 px-14 max-w-[50vh]">
+                                <experience.icon className="h-15 w-15 self-center pb-2"/>
                                 <h2 className="text-xl font-bold">{experience.title}</h2>
                                 <p className="text-lg">{experience.company}</p>
-                                <p className="text-sm"><i>{experience.technologies}</i></p>
+                                <p className="text-sm"><i>{experience.time}</i></p>
                             </div>
                         ))}
                     </div>
@@ -44,8 +45,8 @@ const Skills = () => {
                 transition={{
                 duration: 0.5,
                 }}
-                className="flex justify-center pt-6">
-                <h1 className="text-4xl font-bold py-4">My Skills</h1>
+                className="flex justify-center pt-10">
+                <h1 className="text-4xl max-sm:text-3xl font-bold pb-6">My Skills</h1>
             </motion.div>
             <div className="flex justify-center">
                 <div className="flex flex-wrap justify-center w-[75vh] pb-6 ">
@@ -58,9 +59,15 @@ const Skills = () => {
                             delay: 0.25 + i*0.1,
                         }}
                         className="flex mx-1 my-1">
-                        <SkillItem
-                        title={skill}
-                        />
+                        <motion.div
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }}
+                        className="h-fit w-fit"
+                        >
+                            <SkillItem
+                            title={skill}
+                            />
+                        </motion.div>
                     </motion.div>
                 ))}
                 </div>

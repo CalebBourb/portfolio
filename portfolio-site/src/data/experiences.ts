@@ -1,12 +1,17 @@
+import ElectricCarIcon from '@mui/icons-material/ElectricCar';
+import FlightIcon from '@mui/icons-material/Flight';
+
 export const experiences = [
     {
-    title: "Geomatics Engineering Intern",
-    company: "OGL Engineering",
-    technologies: "Python, Node.js, React Native, SQL, TerraScan, MicroStation, ArcGIS",
+        icon: FlightIcon,
+        title: "Geomatics Engineering Intern",
+        company: "OGL Engineering",
+        time: "May 2023 - September 2023"
     },
     {
-    title: "Software Team Lead",
-    company: "Calgary Solar Car Team",
-    technologies: "C++, Python, React.js, TypeScript, CSS, AWS, SQL, Git"
+        icon: ElectricCarIcon,
+        title: "Software Team Lead",
+        company: "Calgary Solar Car Team",
+        time: "September 2022 - Present"
     }
 ]

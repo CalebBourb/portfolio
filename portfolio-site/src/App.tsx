@@ -6,6 +6,7 @@ import Skills from './pages/Skills';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
 import Navigation from './components/Navigation';
+import ProjectInfo from './pages/ProjectInfo';
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
             <Route path="/skills" element={<Skills />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/projects/:id" element={<ProjectInfo />} />
             <Route path="/Resume" element={""} />
           </Routes>
         </div>

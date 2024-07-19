@@ -36,7 +36,7 @@ const Projects = () => {
                     title={project.title}
                     description={project.description}
                     image={project.image}
-                    github={project.github}
+                    site={project.site}
                     id={project.id}
                     />
                 </motion.div>

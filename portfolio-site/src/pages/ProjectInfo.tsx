@@ -3,6 +3,7 @@ import { Project } from '../types/Project';
 import { projects } from '../data/projects';
 import { motion } from 'framer-motion';
 import { useParams, useNavigate } from 'react-router-dom';
+import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 
 const ProjectInfo = () => {
     const { id } = useParams<{ id: string }>();
@@ -51,13 +52,24 @@ const ProjectInfo = () => {
                         transition={{
                         duration: 0.5,
                         }}
-                        className="flex-col text-center "
+                        className="flex-col text-center"
                         >
-                        <h1 className="text-4xl font-bold pb-10">{project.title}</h1>
-                        <div className="flex justify-center px-4">
-                            <img src={img} alt={project.title} className="w-5/12 rounded-lg"/>
+                        <div className="flex flex-row justify-center items-center">
+                        <h1 className="text-4xl max-sm:text-2xl font-bold pb-4 pr-6 max-sm:pr-2">{project.title}</h1>
+                            <motion.a 
+                                whileHover={{ scale: 1.1 }}
+                                whileTap={{ scale: 0.9 }}
+                                href={project.site} target="_blank" rel="noreferrer" className='w-fit'>
+                                <ExitToAppIcon style={{ fontSize:35 }}/>
+                            </motion.a>
                         </div>
-                        <p className="text-lg p-4">{project.description}</p> 
+                        <div className="flex justify-center px-4">
+                            <img src={img} alt={project.title} className="w-5/12 max-sm:w-3/4 rounded-lg"/>
+                        </div>
+                        <div className="flex justify-center px-4">
+                            <p className="text-lg max-sm:text-md p-4 w-3/5 max-sm:w-full">{project.description}</p>
+                        </div>
+                       
                     </motion.div>
                     <motion.div
                         initial={{ opacity: 0, scale: 0.5 }}

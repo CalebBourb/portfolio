@@ -11,7 +11,6 @@ const ProjectItem = (props: Project) => {
         <div className="w-[50vh] max-sm:w-[40vh] h-fit bg-slate-100 rounded-lg shadow-lg p-4 flex flex-col items-center">
             <img src={img} alt={props.title} className="w-full h-auto rounded-lg mb-4" />
             <div className="text-center">
-
                 <h1 className="text-xl font-bold">{props.title}</h1>
                 <p className="text-gray-700">{props.description}</p>
             </div>
